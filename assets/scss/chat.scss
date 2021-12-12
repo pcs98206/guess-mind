@@ -1,0 +1,51 @@
+.scoreAndChat {
+  .score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    span {
+      display: block;
+      background-color: white;
+      margin-right: 15px;
+      padding: 15px 20px;
+      border-radius: 15px;
+      box-shadow: $boxShadow;
+    }
+  }
+  .chat {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    .chat__messages {
+      padding: 20px 10px;
+      overflow: scroll;
+      background-color: white;
+      height: 50vh;
+      border-radius: 15px;
+      box-shadow: $boxShadow;
+      margin-bottom: 10px;
+      li {
+        margin-bottom: 7px;
+        .self {
+          color: black;
+        }
+        .out {
+          color: $darkBlue;
+        }
+      }
+    }
+    .chat__form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      input {
+        padding: 5px 0;
+        outline: none;
+        width: 100%;
+        padding: 5px;
+      }
+    }
+  }
+}

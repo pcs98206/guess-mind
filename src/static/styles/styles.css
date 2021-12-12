@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.loginBox form input {
+  padding: 8px 10px;
+  border-radius: 10px;
+  min-width: 250px; }
+
+@-webkit-keyframes notification {
+  0% {
+    transform: translateY(80px);
+    opacity: 0; }
+  50% {
+    transform: translateY(-80px);
+    opacity: 1; }
+  100% {
+    transform: translateY(-70px);
+    opacity: 1; } }
+
+@keyframes notification {
+  0% {
+    transform: translateY(80px);
+    opacity: 0; }
+  50% {
+    transform: translateY(-80px);
+    opacity: 1; }
+  100% {
+    transform: translateY(-70px);
+    opacity: 1; } }
+
+@-webkit-keyframes disappear {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+@keyframes disappear {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+.notification {
+  opacity: 0;
+  position: absolute;
+  bottom: 0px;
+  left: 50px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  text-align: center;
+  -webkit-animation: notification 0.5s ease-out forwards, disappear 0.5s ease-in forwards;
+  animation: notification 0.5s ease-out forwards, disappear 0.5s ease-in forwards;
+  -webkit-animation-delay: 0.5s, 2s;
+  animation-delay: 0.5s, 2s;
+  color: white; }
+
+.scoreAndChat .score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px; }
+  .scoreAndChat .score span {
+    display: block;
+    background-color: white;
+    margin-right: 15px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); }
+
+.scoreAndChat .chat {
+  display: flex;
+  flex-direction: column;
+  width: 250px; }
+  .scoreAndChat .chat .chat__messages {
+    padding: 20px 10px;
+    overflow: scroll;
+    background-color: white;
+    height: 50vh;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-bottom: 10px; }
+    .scoreAndChat .chat .chat__messages li {
+      margin-bottom: 7px; }
+      .scoreAndChat .chat .chat__messages li .self {
+        color: black; }
+      .scoreAndChat .chat .chat__messages li .out {
+        color: #007aff; }
+  .scoreAndChat .chat .chat__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .scoreAndChat .chat .chat__form input {
+      padding: 5px 0;
+      outline: none;
+      width: 100%;
+      padding: 5px; }
+
+.gameContainer .canvasContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px; }
+  .gameContainer .canvasContainer .gameWord {
+    display: block;
+    background-color: white;
+    padding: 15px 10px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); }
+  .gameContainer .canvasContainer .canvas {
+    width: 700px;
+    height: 700px;
+    background-color: white;
+    margin-bottom: 30px; }
+  .gameContainer .canvasContainer .controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .gameContainer .canvasContainer .controls .controls__rangeAndBtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px; }
+      .gameContainer .canvasContainer .controls .controls__rangeAndBtn button {
+        margin-left: 15px;
+        outline: 0;
+        border: none;
+        padding: 7px 20px;
+        border-radius: 15px;
+        background-color: #3b7bf1;
+        color: white;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer; }
+    .gameContainer .canvasContainer .controls .controls__colors {
+      display: flex; }
+      .gameContainer .canvasContainer .controls .controls__colors .controls__color {
+        margin-right: 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+        cursor: pointer; }
+
+* {
+  box-sizing: border-box; }
+
+button:focus {
+  outline: none; }
+
+html {
+  height: 100%; }
+
+body {
+  background-color: #f5f8fc;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
+  body .loginBox,
+  body .gameContainer {
+    display: none; }
+  body.loggedIn .gameContainer {
+    display: flex; }
+  body.loggedOut .loginBox {
+    display: block; }

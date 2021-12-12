@@ -1,0 +1,41 @@
+{
+  "name": "guess-mind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:server": "nodemon --exec babel-node src/server.js --ignore assets/ --ignore src/static",
+    "dev:assets": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pcs98206/guess-mind.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pcs98206/guess-mind/issues"
+  },
+  "homepage": "https://github.com/pcs98206/guess-mind#readme",
+  "dependencies": {
+    "babelify": "^10.0.0",
+    "del": "^6.0.0",
+    "express": "^4.17.1",
+    "gulp-autoprefixer": "^8.0.0",
+    "morgan": "^1.10.0",
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.15",
+    "pug": "^3.0.2",
+    "socket.io": "^4.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/node": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "gulp": "^4.0.2",
+    "gulp-bro": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.43.4"
+  }
+}

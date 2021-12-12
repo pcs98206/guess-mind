@@ -1,0 +1,41 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="styles/styles.css")
+        title Guess-Mind
+    body 
+        .loginBox 
+            form#jsLogin
+                input(type="text", placeholder="닉네임을 입력하세요.", maxlength='10')
+        .gameContainer#jsGame
+            .canvasContainer#jsCanvasContainer
+                span.gameWord#jsSpan 
+                canvas.canvas#jsCanvas
+                .controls#jsControls
+                    .controls__rangeAndBtn 
+                        input(type="range", id="jsRange", min="0.1", max="10.0", step="0.1", value="5.0")
+                        button(id="jsMode") Fill 
+                    .controls__colors#jsColors 
+                        .controls__color.jsColor(style="background-color: rgb(0, 0, 0)")
+                        .controls__color.jsColor(style="background-color: rgb(255,255,255)")
+                        .controls__color.jsColor(style="background-color: rgb(255,59,48)")
+                        .controls__color.jsColor(style="background-color: rgb(255,149,0)")
+                        .controls__color.jsColor(style="background-color: rgb(255,204,0)")
+                        .controls__color.jsColor(style="background-color: rgb(76,217,100)")
+                        .controls__color.jsColor(style="background-color: rgb(90,200,250)")
+                        .controls__color.jsColor(style="background-color: rgb(0,122,255)")
+                        .controls__color.jsColor(style="background-color: rgb(88,86,214)")
+            .scoreAndChat 
+                .score#jsScore
+                .chat 
+                    ul.chat__messages#jsMessages 
+                    form.chat__form#jsSendMsg
+                        input(placeholder="메세지를 입력하세요.", type="text")
+            div#jsNotifications
+        
+    script.
+        window.events=!{events}
+    script(src="/socket.io/socket.io.js")
+    script(src="/js/main.js")  
